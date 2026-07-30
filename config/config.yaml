@@ -1,0 +1,32 @@
+# NIDS Configuration File
+# Edit these values to tune detection behavior without touching code.
+
+network:
+  interface: "Ethernet 2"        # Confirmed from ipconfig — this is your active connected adapter
+
+detection:
+  port_scan:
+    unique_ports_threshold: 15    # Alert if a source IP hits more than this many unique ports
+    time_window_seconds: 10       # ...within this many seconds
+
+  syn_flood:
+    syn_count_threshold: 50       # Alert if a source IP sends more than this many SYNs
+    time_window_seconds: 5        # ...within this many seconds without completing the handshake
+
+  icmp_flood:
+    icmp_count_threshold: 30      # Alert if a source IP sends more than this many ICMP packets
+    time_window_seconds: 5        # ...within this many seconds
+
+  dns_tunneling:
+    subdomain_length_threshold: 50  # Alert if a DNS subdomain query exceeds this many characters
+
+  malicious_ips: []       # List of known-bad IPs to flag, e.g. ["1.2.3.4", "5.6.7.8"]
+  malicious_ports: []     # List of known-bad ports to flag, e.g. [4444, 31337]
+
+logging:
+  log_dir: "logs"
+  log_level: "INFO"        # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_file: "nids.log"
+
+dashboard:
+  refresh_interval_seconds: 3
