@@ -2,7 +2,7 @@
 # Edit these values to tune detection behavior without touching code.
 
 network:
-  interface: "Ethernet 2"        # Confirmed from ipconfig — this is your active connected adapter
+  interface: "Wi-Fi"        # Confirmed from ipconfig — this is your active connected adapter
 
 detection:
   port_scan:
