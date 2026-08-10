@@ -220,4 +220,4 @@ This tool is intended for use on networks you own or have explicit authorization
 
 ## License
 
-TBD
+MIT
