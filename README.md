@@ -29,6 +29,17 @@ This is an **IDS**, not an IPS — it observes and alerts, but does not block tr
 - **Structured logging** — full audit trail of system activity and detections, to both console and a rotating log file
 - **Automated test suite** — 105 pytest tests covering configuration, traffic analysis, alerting, detection rules, the detection engine, and end-to-end pipeline behavior
 
+## Screenshots
+
+**Live dashboard with active PORT_SCAN alerts:**
+![Dashboard with alerts](screenshots/dashboard-live-alerts.png)
+
+**Dashboard running via `python src/main.py run`:**
+![Dashboard run mode](screenshots/dashboard-run-mode.png)
+
+**Automated test suite passing:**
+![pytest passing](screenshots/pytest-suite-passing.png)
+
 ## Tech Stack
 
 | Technology | Role |
